@@ -1,8 +1,8 @@
 # Rsync Inotify Watch
 
-A little script that demonstrates the use of inotifywatch + rsync for watching a specific directory for changes (i.e. newly created, modified, deleted, moved, or close-written files) and syncing with a target directory.
+A little script that demonstrates the use of inotifywatch + rsync for watching a specific directory for changes (i.e. newly created, modified, deleted, moved, or close-written files) and syncing with a target directory. The process described here can easily be extended/automated using a configuration management tool like Ansible or Puppet
 
-#### Install requirements
+### Install requirements
 
 >inotify-tools and rsync are the only requirements
 
@@ -11,25 +11,25 @@ $ sudo apt install inotify-tools
 $ sudo apt install rsync
 ```
 
-#### Download dir-watch.sh script
+### Download dir-watch.sh script
 
 ```shell
 $ wget https://github.com/pam79/rsync-inotify-watch/raw/master/dir-watch.sh
 ```
 
-#### Move script into your PATH
+### Move script into your PATH
 
 ```shell
 $ sudo mv dir-watch.sh /usr/bin/dir-watch
 ```
 
-#### Make script executable
+### Make script executable
 
 ```shell
 $ sudo chmod +x /usr/bin/dir-watch
 ```
 
-#### Make scripts execute without password
+### Make scripts execute without password
 
 >We are doing this because our cron requires it
 
@@ -37,13 +37,13 @@ $ sudo chmod +x /usr/bin/dir-watch
 $ sudo visudo
 ```
 
-#### add the following below "%sudo ALL=(ALL:ALL) ALL" line:
+### add the following below "%sudo ALL=(ALL:ALL) ALL" line:
 
 >Replace `abdullah` with your own user
 
     abdullah ALL=(ALL) NOPASSWD: /usr/bin/dir-watch
 
-#### Test the script to make sure it is working properly
+### Test the script to make sure it is working properly
 
 >It takes `source` and `destination` as input parameters
 
@@ -52,15 +52,9 @@ $ mkdir Test /media/storage1/Test
 $ dir-watch "/home/$(whoami)/Test/" "/media/storage1/Test/"
 ```
 
-#### Create or delete a file in user space and check status
+### Create or delete a file in user space and check status
 
 ```shell
 $ touch Test/file.txt
 $ ls -la /media/storage1/Test
 ```
-
-
-
-
-
-The process described above can easily be extended/automated using a configuration management tool like Ansible or Puppet
