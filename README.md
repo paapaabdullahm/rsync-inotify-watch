@@ -1,6 +1,6 @@
 # Rsync Inotify Watch
 
-A little script that demonstrates the use of inotifywatch + rsync for watching a specific directory for changes (i.e. newly created, modified, deleted, moved, or close-written files) and syncing with a target directory. The process described here can easily be extended/automated using a configuration management tool like Ansible or Puppet
+A little script that demonstrates the use of inotifywatch + rsync for watching a specific directory for changes (i.e. newly created, modified, deleted, moved, or close-written files) and syncing with a target directory. The process described here can easily be extended/automated using a configuration management tool like Ansible or Puppet.
 
 ### Install requirements
 
