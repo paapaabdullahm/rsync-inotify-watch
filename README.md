@@ -59,7 +59,7 @@ $ touch Test/file.txt
 $ ls -la /media/storage1/Test
 ```
 
-### Create a cron job in `/etc/crontab` and have it run every time your system reboots
+### Create a cron job in `/etc/crontab` and have it run each time your system is rebooted
 
 ```shell
 $ sudo vim /etc/crontab
