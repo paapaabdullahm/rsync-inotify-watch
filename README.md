@@ -67,8 +67,10 @@ $ sudo vim /etc/crontab
 
 ### Add this line to it
 
->Replace src and dest with your own paths
+>Replace src and dest with your own paths.
 
     @reboot   root   dir-watch "/home/$(whoami)/Projects/" "/media/storage1/Projects/" 2>&1 | /usr/bin/logger -t dir_watch
 
-Now your system will always watch all changes made in the specified source directory and synchronize with target or destination directory.
+### Finally,  reboot your system for changes to take effect
+
+Now your system will always watch for changes made in the specified source directory and synchronize with the target or destination directory.
