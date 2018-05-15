@@ -65,7 +65,7 @@ $ ls -la /media/storage1/Test
 $ sudo vim /etc/crontab
 ```
 
-### Add this line to it
+### Add this line to the crontab
 
 >Replace src and dest with your own paths.
 
