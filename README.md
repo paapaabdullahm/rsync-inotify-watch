@@ -39,9 +39,9 @@ $ sudo visudo
 
 ### add the following below "%sudo ALL=(ALL:ALL) ALL" line:
 
->Replace `abdullah` with your own user
+>Replace `pam79` with your own user
 
-    abdullah ALL=(ALL) NOPASSWD: /usr/bin/dir-watch
+    pam79 ALL=(ALL) NOPASSWD: /usr/bin/dir-watch
 
 ### Test the script to make sure it is working properly
 
@@ -69,7 +69,7 @@ $ sudo vim /etc/crontab
 
 >Replace src and dest with your own paths.
 
-    @reboot   root   dir-watch "/home/$(whoami)/Projects/" "/media/storage1/Projects/" 2>&1 | /usr/bin/logger -t dir_watch
+    @reboot   root   dir-watch "/home/pam79/Projects/" "/media/storage1/Projects/" 2>&1 | logger -t dir-watch
 
 ### Finally,  reboot your system for changes to take effect
 
