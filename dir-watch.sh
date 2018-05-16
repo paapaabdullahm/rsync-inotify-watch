@@ -9,7 +9,7 @@ dest="$2"
 while true; do
         # watch for new files. will return true if a file has
         # been created, modified, deleted, moved, close_written.
-        inotifywatch -e create,modify,delete,move,close_write -t 1 "$src" 2>/dev/null
+        inotifywatch -e create,modify,delete,move,close_write -t 300 "$src" 2>/dev/null
 
         # rsync files from src to dest
         # -u updates-only
