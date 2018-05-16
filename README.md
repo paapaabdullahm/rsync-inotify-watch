@@ -73,4 +73,4 @@ $ sudo vim /etc/crontab
 
 ### Finally,  reboot your system for changes to take effect
 
-Now your system will always watch for changes made in the specified source directory and synchronize with the target or destination directory.
+Now after every 5min (i.e. 300s) your system will watch for changes made in the specified source directory and synchronize with the target or destination directory.
