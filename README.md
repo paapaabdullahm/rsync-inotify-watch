@@ -29,7 +29,7 @@ $ sudo mv dir-watch.sh /usr/bin/dir-watch
 $ sudo chmod +x /usr/bin/dir-watch
 ```
 
-### Make scripts execute without password
+### Make script execute without password
 
 >We are doing this because our cron requires it
 
